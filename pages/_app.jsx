@@ -1,4 +1,4 @@
-// Core packages
+import React from 'react'
 import { Analytics } from '@vercel/analytics/react';
 import { LazyMotion, domAnimation } from "framer-motion"
 
@@ -32,16 +32,18 @@ import '../styles/css/global.css'
  * @param {?} pageProps
  * @returns
  */
-export default function MyApp({ Component, pageProps }) {
-	return (
-		<>
-		<LazyMotion features={domAnimation}>
-			<Layout>
-				<Component {...pageProps} />
-				<SetGridGap />
-				<Analytics />
-			</Layout>
-		</LazyMotion>
-		</>
-	)
+function MyApp({ Component, pageProps }) {
+  return (
+    <React.Fragment>
+      <LazyMotion features={domAnimation}>
+        <Layout>
+          <Component {...pageProps} />
+          <SetGridGap />
+          <Analytics />
+        </Layout>
+      </LazyMotion>
+    </React.Fragment>
+  )
 }
+
+export default MyApp
