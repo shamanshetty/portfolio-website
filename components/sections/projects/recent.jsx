@@ -17,7 +17,7 @@ export default function GitProjects({ repos, user }) {
 					<Image className={css.profilePhoto} src={`${user[0].avatar_url}`} alt="Github Profile Photo" height={60} width={60}/>
 					<span class={css.details}>
 						<p>{user[0].name}</p>
-						<a href={user[0].html_url} rel="noreferrer" target="_blank">{user[0].html_url} <Icon icon={[ 'far', 'arrow-up-right-from-square' ]} /></a>
+						<a href={user[0].html_url} rel="noreferrer" target="_blank">{user[0].html_url} <Icon icon={[ 'fas', 'arrow-up-right-from-square' ]} /></a> {/* Replaced 'far' with 'fas' */}
 					</span>
 				</section>
 				<div className={css.projects}>
@@ -28,16 +28,16 @@ export default function GitProjects({ repos, user }) {
 							<>
 							<article key={index} className={css.project}>
 								<span className={css.header}>
-									<a href={html_url} rel="noreferrer" target="_blank">{name} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
+									<a href={html_url} rel="noreferrer" target="_blank">{name} <Icon icon={[ 'fas', 'arrow-up-right-from-square' ]} /></a> {/* Replaced 'fad' with 'fas' */}
 									<p className={css.homepage}>{homepage}</p>
 								</span>
 								<span className={css.descriptionContainer}>
 									<p className={css.description}>{description}</p>
 								</span>
 								<span className={css.details}>
-									<p><i className={`devicon-${language.toLowerCase()}-plain colored`} /> {language}</p>
-									<p><Icon icon={[ 'fad', 'star' ]} /> {watchers}</p>
-									<p><Icon icon={[ 'fad', 'code-branch' ]} /> {forks_count}</p>
+									<p><Icon icon={[ 'fas', 'code' ]} /> {language}</p> {/* Replaced 'fad' with 'fas' */}
+									<p><Icon icon={[ 'fas', 'star' ]} /> {watchers}</p> {/* Replaced 'fad' with 'fas' */}
+									<p><Icon icon={[ 'fas', 'code-branch' ]} /> {forks_count}</p> {/* Replaced 'fad' with 'fas' */}
 									<p className={css.pushedAt}>{date}</p>
 								</span>
 								<span className={css.topicsContainer}>

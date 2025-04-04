@@ -24,50 +24,54 @@ import about from '../../../styles/sections/index/about.module.scss';
  * @returns {jsx} <About />
  */
 export default function About() {
-	return (
-		<Section classProp={about.section}>	
-			<Container spacing={['verticalXXXLrg']}>
-				<SectionTitle
-					title="About Me"
-					preTitle="Synopsis"
-					subTitle="With a diverse skill set that includes UX design, UI design, full stack development, operational architecture, systems design, photography, and branding, I am a well-rounded digital professional."
-				/>
-				<section className={about.content}>
-					<div className={about.image}>
-						<img src="/img/family-photo.jpg" alt="Nelson family photo"/>
-						{/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
-					</div>
-					<div className={about.copy} >
-						<CopyBlock 
-							title="Softskills that pay the bills"
-							containerClass={about.container}
-							iconClass={about.icon}
-							icon={[ 'fat', 'ear-listen' ]}
-							copy="In addition to my design and technical expertise—I also have strong leadership, time management, and multitasking skills—honed through my experience as a business owner / managing partner, husband, and father of two. Outside of work, I enjoy staying active through sports such as hockey and snowboarding. I am confident in my ability to bring passion and value to any project."
-						/>
-						<BadgesBlock 
-							title="Reasearch and planning" 
-							containerClass={about.container}
-							list={methods} 
-							fullContainer="fullContainer"
-							block="methods" 
-							icon="fingerprint"
-							copy="One of my favorite aspects of creating is planning the architecture of a project. From Design Systems to Brand Strategy—I enjoy working with the many touch points of user experience."
-							//invertedColor="invertedColor"
-							headerIcon={`${about.icon}`}
-						/>
-					</div>
-				</section>	
-			</Container>
-		</Section>
-	)
+    return (
+        <Section classProp={about.section}>	
+            <Container spacing={['verticalXXXLrg']}>
+                <SectionTitle
+                    title="About Me"
+                    preTitle="Synopsis"
+                    subTitle="Hello! I’m a sophomore pursuing a B.Tech in Computer Engineering at NMIMS MPSTME. With a keen interest in web development, app development, artificial intelligence, and data engineering, I am passionate about leveraging technology to solve real-life problems. Currently, I am exploring various fields within the tech domain to broaden my skill set and knowledge.
+
+I thrive on challenges and am always eager to learn and grow. Whether it’s building dynamic web applications, developing innovative mobile apps, or diving into the complexities of AI and data engineering, I am committed to making a positive impact through technology.
+
+Let’s connect and explore opportunities to collaborate and innovate!"
+                />
+                <section className={about.content}>
+                    <div className={about.image}>
+                        <Image src="/img/speech.jpg" layout='fill' objectFit='cover' objectPosition='80% 70%'  alt="Nelson family photo" />
+                        {/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
+                    </div>
+                    <div className={about.copy} >
+                        <CopyBlock 
+                            title="Vice president at Microsoft Students Club of MPSTME."
+                            containerClass={about.container}
+                            iconClass={about.icon}
+                            icon={[ 'fas', 'headphones' ]} /* Replaced 'fat' icon */
+                            copy="In addition to my design and technical expertise—I also have strong leadership, time management, and multitasking skills—honed through my experience as the Vice president of the Microsoft Students Club at MPSTME. I am passionate about fostering a collaborative and innovative environment, where team members can thrive and contribute their best work. I believe that effective communication and teamwork are key to achieving success in any project, and I strive to create a positive and inclusive atmosphere for all."
+                        />
+                        <BadgesBlock 
+                            title="Business development and Marketing Head at Sports Committee of MPSTME." 
+                            containerClass={about.container}
+                            list={methods} 
+                            fullContainer="fullContainer"
+                            block="methods" 
+                            icon="fingerprint"
+                            copy="As the Business Development and Marketing Head of the Sports Committee at MPSTME, I have honed my skills in strategic planning, marketing, and team management. I am passionate about promoting sports and fitness within our community, and I am dedicated to creating opportunities for students to engage in physical activities and develop their skills. My experience in this role has taught me the importance of effective communication, collaboration, and adaptability in achieving our goals."
+                            //invertedColor="invertedColor"
+                            headerIcon={`${about.icon}`}
+                        />
+                    </div>
+                </section>	
+            </Container>
+        </Section>
+    )
 }
 
 const methods 	= [
-	{ key: 'planet-moon', 		name: 'User Research', 		type: 'fad' },
-	{ key: 'qrcode', 			name: 'Digital Strategy', 	type: 'fad' },
-	{ key: 'window', 			name: 'Design Systems', 	type: 'fad' },
-	{ key: 'cubes', 			name: 'Product Strategy', 	type: 'far' },
-	{ key: 'layer-plus', 		name: 'Brand Strategy', 	type: 'fad' },
-	{ key: 'solar-system', 		name: 'Operations', 		type: 'fad' },
+    { key: 'globe', 			name: 'Sponsorship Acquisition', 	type: 'fas' }, // Replaced 'fad'
+    { key: 'qrcode', 			name: 'Team Management', 			type: 'fas' }, // Replaced 'fad'
+    { key: 'window-maximize', 	name: 'Leadership Skills', 			type: 'fas' }, // Replaced 'fad'
+    { key: 'cubes', 			name: 'Event Planning', 			type: 'fas' }, // Changed 'far' to 'fas'
+    { key: 'layer-group', 		name: 'Brand Strategy', 			type: 'fas' }, // Replaced 'fad'
+    { key: 'solar-panel', 		name: 'Operations', 				type: 'fas' }, // Replaced 'fad'
 ]
